@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import "./App.css";
+import { StyledComponent } from 'styled-components';
 
 import { worker } from "./mocks/browser";
 worker.start();

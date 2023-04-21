@@ -1,10 +1,11 @@
 // Write your Character component here
 import React from "react";
 
+
 const Characters = (props) => {
     return (
         <div>
-            <h2>Characters {props.name}</h2>
+            <button onClick={props.getData}>Get Characters</button>
         </div>
     );
 };
