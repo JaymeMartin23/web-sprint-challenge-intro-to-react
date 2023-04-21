@@ -1,13 +1,33 @@
 // Write your Character component here
-import React from "react";
+import React, { useState, UseEffect } from 'react';
+import styled from 'styled-components'
 
 
-const Characters = (props) => {
+
+
+const Character = props => {
     return (
         <div>
-            <button onClick={props.getData}>Get Characters</button>
+            {
+                props.character.map
+            }
         </div>
-    );
-};
+    )
+}
 
-export default Characters
+//**  const Character = ({ character }) => {
+//   return (
+    // <CharacterWrapper>
+    //   <Name>{character.name}</Name>
+    //   <p>Height: {character.height}</p>
+    //   <p>Mass: {character.mass}</p>
+    //   <p>Hair color: {character.hair_color}</p>
+    //   <p>Skin color: {character.skin_color}</p>
+    //   <p>Eye color: {character.eye_color}</p>
+    //   <p>Birth year: {character.birth_year}</p>
+    //   <p>Gender: {character.gender}</p>
+    // </CharacterWrapper>
+//   );
+// }; */
+
+export default Character;
