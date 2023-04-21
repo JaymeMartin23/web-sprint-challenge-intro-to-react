@@ -3,14 +3,15 @@ import React from 'react';
 import styled from 'styled-components'
 
 const CharacterWrapper = styled.div`
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-`;
+    border: 1px solid #ccc;
+     padding: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+ `;
 
 const Name = styled.h2`
-  margin-top: 0;
-`;
+ margin-top: 0;
+ `;
 
 
 const Character = ({ name, height, gender, birthYear }) => {

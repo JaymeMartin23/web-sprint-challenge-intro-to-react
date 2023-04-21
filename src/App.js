@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Character from './components/Character'
 import axios from 'axios';
 
+
 const App = () => {
   const [characters, setCharacters] = useState([]);
 
@@ -14,20 +15,12 @@ const App = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  const characterList = characters.map((character) => (
-    <Character
-      key={character.name}
-      name={character.name}
-      height={character.height}
-      gender={character.gender}
-      birthYear={character.birth_year}
-    />
-  ));
-
   return (
     <div>
       <h1>Star Wars Characters</h1>
-      {characterList}
+      {characters.map((character) => (
+        <Character key={character.name} name={character.name} />
+      ))}
     </div>
   );
 };
