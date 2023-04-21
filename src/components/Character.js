@@ -1,28 +1,24 @@
 // Write your Character component here
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const CharacterWrapper = styled.div`
-    border: 1px solid #ccc;
-     padding: 10px;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
- `;
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+`;
 
 const Name = styled.h2`
- margin-top: 0;
- `;
+  margin-top: 0;
+`;
 
+const Character = ({ name }) => {
+  return (
+    <CharacterWrapper>
+      <Name>{name}</Name>
+    </CharacterWrapper>
+  );
+};
 
-const Character = ({ name, height, gender, birthYear }) => {
-    return (
-      <CharacterWrapper>
-        <Name>{name}</Name>
-        <p>Height: {height}</p>
-        <p>Gender: {gender}</p>
-        <p>Birth year: {birthYear}</p>
-      </CharacterWrapper>
-    );
-  };
-  
-  export default Character;
+export default Character;
