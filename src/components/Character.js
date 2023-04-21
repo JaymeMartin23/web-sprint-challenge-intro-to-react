@@ -3,20 +3,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CharacterWrapper = styled.div`
-  background-color: #f4f4f4;
+  border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
 `;
 
 const Name = styled.h2`
   margin-top: 0;
 `;
 
-const Character = ({ name }) => {
+const Character = ({ name, height, gender, birthYear }) => {
   return (
     <CharacterWrapper>
       <Name>{name}</Name>
+      <p>Height: {height}</p>
+      <p>Gender: {gender}</p>
+      <p>Birth year: {birthYear}</p>
     </CharacterWrapper>
   );
 };
