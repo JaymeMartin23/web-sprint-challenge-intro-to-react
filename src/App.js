@@ -9,7 +9,7 @@ const App = () => {
   // the state properties here.
  
   
-    const [characters, setCharacters] = useState([]);
+    const [characters] = useState([]);
   
     useEffect(() => {
       axios 
