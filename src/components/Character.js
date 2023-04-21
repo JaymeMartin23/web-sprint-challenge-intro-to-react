@@ -1,33 +1,27 @@
 // Write your Character component here
-import React, { useState, UseEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 
+const CharacterWrapper = styled.div`
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+`;
+
+const Name = styled.h2`
+  margin-top: 0;
+`;
 
 
-
-const Character = props => {
+const Character = ({ name, height, gender, birthYear }) => {
     return (
-        <div>
-            {
-                props.character.map
-            }
-        </div>
-    )
-}
-
-//**  const Character = ({ character }) => {
-//   return (
-    // <CharacterWrapper>
-    //   <Name>{character.name}</Name>
-    //   <p>Height: {character.height}</p>
-    //   <p>Mass: {character.mass}</p>
-    //   <p>Hair color: {character.hair_color}</p>
-    //   <p>Skin color: {character.skin_color}</p>
-    //   <p>Eye color: {character.eye_color}</p>
-    //   <p>Birth year: {character.birth_year}</p>
-    //   <p>Gender: {character.gender}</p>
-    // </CharacterWrapper>
-//   );
-// }; */
-
-export default Character;
+      <CharacterWrapper>
+        <Name>{name}</Name>
+        <p>Height: {height}</p>
+        <p>Gender: {gender}</p>
+        <p>Birth year: {birthYear}</p>
+      </CharacterWrapper>
+    );
+  };
+  
+  export default Character;
